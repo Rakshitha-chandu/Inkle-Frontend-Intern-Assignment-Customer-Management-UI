@@ -13,12 +13,6 @@ I also added **dark mode**, an enhanced header, and overall UI polish for a smoo
 
 ---
 
-## 📸 Final Application Preview
-![App Screenshot](./screenshot.png)
-![App Screenshot](./screenshot1.png)
-
-
-
 ---
 
 # 🧱 Tech Stack
@@ -112,5 +106,8 @@ This maintains consistency with the Figma UI while using available API data.
 - Careful spacing and typography system.
 
 ---
+## 📸 Final Application Preview
+![App Screenshot](./screenshot.png)
+![App Screenshot](./screenshot1.png)
 
 
