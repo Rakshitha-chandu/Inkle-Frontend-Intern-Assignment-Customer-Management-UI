@@ -16,8 +16,6 @@ I also added **dark mode**, an enhanced header, and overall UI polish for a smoo
 ## 📸 Final Application Preview
 ![App Screenshot](./screenshot.png)
 ![App Screenshot](./screenshot1.png)
-![App Screenshot](./screenshot2.png)
-![App Screenshot](./screenshot3.png)
 
 
 
