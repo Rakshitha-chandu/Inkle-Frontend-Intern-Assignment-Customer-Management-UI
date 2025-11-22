@@ -13,8 +13,6 @@ I also added **dark mode**, an enhanced header, and overall UI polish for a smoo
 
 ---
 
----
-
 # 🧱 Tech Stack
 
 - **React + TypeScript**
