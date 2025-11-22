@@ -9,7 +9,7 @@ I also added **dark mode**, an enhanced header, and overall UI polish for a smoo
 
 ## 🚀 Live Demo
 
-🔗 **Live App:** _Add your deployed link here_
+🔗 **Live App:**https://inkle-frontend-intern-assignment-cu.vercel.app/
 
 ---
 
@@ -115,18 +115,4 @@ This maintains consistency with the Figma UI while using available API data.
 
 ---
 
-# 📂 Project Structure
-src/
-├── api/
-│ ├── taxes.ts
-│ └── countries.ts
-├── components/
-│ ├── TaxesTable.tsx
-│ └── EditCustomerModal.tsx
-├── styles/
-│ └── globals.css
-├── App.tsx
-└── main.tsx
-
-# 📂 Project Structure
 
