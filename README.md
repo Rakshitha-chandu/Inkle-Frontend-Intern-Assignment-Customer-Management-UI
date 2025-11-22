@@ -1,73 +1,132 @@
-# React + TypeScript + Vite
+# 📌 Inkle Frontend Intern Assignment – Customer Management UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains my submission for the **Inkle Frontend Intern Assignment**.  
+It is built using **React (TypeScript)** and follows the provided **Figma design** closely while implementing all functional requirements such as table rendering, filtering, and editing customers.
 
-Currently, two official plugins are available:
+I also added **dark mode**, an enhanced header, and overall UI polish for a smoother experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 **Live App:** _Add your deployed link here_
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📸 Final Application Preview
+![App Screenshot](./screenshot.png)
+![App Screenshot](./screenshot1.png)
+![App Screenshot](./screenshot2.png)
+![App Screenshot](./screenshot3.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 🧱 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React + TypeScript**
+- **Vite**
+- **TanStack Table**
+- **REST API Integration**
+- **Custom CSS Styling**
+- **React Hooks (useState, useEffect, useMemo)**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+# 🎯 Features Implemented
+
+## ✅ 1. Customer Table (TanStack Table)
+
+- Displays all customer details:
+  - **Entity (Name)**
+  - **Gender (pills)**
+  - **Request Date** (formatted using `createdAt`)
+  - **Country**
+  - **Edit Action**
+- Clean spacing, shadows, borders, and typography based on the Figma design.
+- Hover states and smooth transitions for better UX.
+
+---
+
+## ✅ 2. Multi-Select Country Filter
+
+- Filter icon in the “Country” column header.
+- Opens a popover with checkbox list of countries.
+- Allows selecting multiple countries at once.
+- Includes a **Clear** button to reset filters.
+- Closes automatically on clicking outside.
+- Accurate Figma-inspired design.
+
+---
+
+## ✅ 3. Edit Customer Modal
+
+- Opens when clicking the edit icon.
+- Editable fields:
+  - **Name** (entity)
+  - **Country**
+- PUT request updates customer data.
+- Local table updates automatically.
+- Clean modal styling, backdrop, and responsive layout.
+- Validation and saving indicator.
+
+---
+
+## ✅ 4. Request Date Handling
+
+The API does **not** include a `request_date` field.
+
+👉 I used `createdAt` instead, converting it to a readable date:
+
+**Example:**  
+`2025-06-16T09:51:53.484Z` → **Jun 16, 2025**
+
+This maintains consistency with the Figma UI while using available API data.
+
+---
+
+# ⭐ Additional Enhancements (Above Requirements)
+
+### 🌙 Dark Mode Support
+
+- Theme toggle button in the header.
+- Full dark theme for:
+  - Table
+  - Modal
+  - Buttons
+  - Text
+  - Filter popover
+- Smooth transitions and visual clarity.
+
+### 🎨 Upgraded Page Header
+
+- Gradient-style **“Customers”** title.
+- Accent underline bar.
+- Subtitle matching the tone of a real dashboard:
+  - *“Manage customer details and request history”*
+
+### 🧼 General UI Polish
+
+- Rounded card UI.
+- Shadows and depth.
+- Subtle animations throughout the UI.
+- Careful spacing and typography system.
+
+---
+
+# 📂 Project Structure
+src/
+├── api/
+│ ├── taxes.ts
+│ └── countries.ts
+├── components/
+│ ├── TaxesTable.tsx
+│ └── EditCustomerModal.tsx
+├── styles/
+│ └── globals.css
+├── App.tsx
+└── main.tsx
+
+# 📂 Project Structure
+
